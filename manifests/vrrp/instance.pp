@@ -135,7 +135,7 @@
 #                          Default: false.
 
 define keepalived::vrrp::instance (
-  $interface,
+  $interface                  = 'eth0',
   $priority,
   $state,
   $virtual_ipaddress,
