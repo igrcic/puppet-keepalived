@@ -23,8 +23,9 @@ define keepalived::vrrp::script (
   $interval  = '2',
   $script    = undef,
   $weight    = undef,
-  $fall      = undef,
-  $rise      = undef,
+  $fall      = 1,
+  $rise      = 1,
+  $timeout   = 2,
   $no_weight = false,
 ) {
   $_name = regsubst($name, '[:\/\n]', '')
